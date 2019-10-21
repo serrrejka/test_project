@@ -1,0 +1,215 @@
+.header {
+    background: url(../img/header/header-bg.jpg) top center no-repeat;
+    background-size: cover;
+    object-fit: cover;
+        &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__logo {
+            margin-top: 30px;
+        }
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            .btn__menu {
+                width: 36px;
+                height: 36px;
+                position: absolute;
+                right: 15px;
+                cursor: pointer;
+                display: none;
+                .btn-row {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $textBlack;
+                    margin-bottom: 8px;
+                }
+            }
+            ul {
+                display: flex;
+                li {
+                    margin-left: 39px;  
+                    a {
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        color: $menuBlack;
+                        // padding: 30px;   
+                        font-weight: 500;
+                        text-align: center;
+                        transition: all .4s ease;
+                        display: block;
+                        width: 100%;
+                        &::after {
+                            content: "";
+                            display: block;
+                            // margin: 0 auto;
+                            width: 100%;    
+                            height: 2px;
+                            background-color: #878787;
+                            transform: translateY(-111px) scale(0);
+                            transition: all .4s ease;
+                        }
+                        &:hover {
+                            // text-transform: none;
+                            &::after {
+                                transform: translateY(9px) scale(1)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        &__author {
+            &--luis {
+                font-size: 90px;
+                font-weight: 500;
+                font-size: 90px;
+                color: $menuBlack;
+                margin-top: 160px;
+                margin-left: -7px;
+                width: 548px;
+            }
+            &--user {
+                margin-top: 5px;
+                color: $gray;
+                margin-bottom: 29px;
+                @include Myriad;
+            }
+            &--btn {
+                background-color: transparent;
+                border: 1px solid $menuBlack;
+                color: $menuBlack;
+                width: 160px;
+                height: 50px;
+                text-transform: uppercase;
+                transition: all .4s ease;
+                margin-right: 19px;
+                font-size: 16px;
+                letter-spacing: 0.96px;
+                font-weight: 500;
+                font-family: "Asap", sans-serif;
+                &:hover {
+                    box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+                    background-color: #ffffff;
+                    transition: all .4s ease;
+                    border: transparent;
+                }
+            }
+        }
+        &__img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1119px) {
+    .header { 
+        &-content {
+            &__img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .header { 
+        &-content {
+            &__author {
+                &--luis {
+                    font-size: 70px;
+                    margin-top: 80px;
+                    width: 440px;
+                }
+                &--btn {
+                    margin-bottom: 30px;
+                }
+            }
+            &__img {
+                img {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        &-wrapper {
+            &__nav {
+                .btn__menu {
+                    display: block;
+                }
+                ul {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    text-align: center;
+                    background-color: #71716f;
+                    z-index: 1000;
+                    overflow: auto;
+                    opacity: 1;
+                    top: 100px;
+                    li {
+                        display: block;
+                        margin-left: 0;
+					    a {
+                            display: block;
+                            padding: 10px 0;    
+                            transition: all .5s;
+                            &:hover {
+                                &::after {
+                                    transform: translateY(0) scale(0)
+                                }
+                            }
+                        }
+                        &:hover {
+                            background-color: $textBlack;
+                            color: #ffffff;
+                        }
+                    }
+                }
+                
+            }
+        }
+        &-content {
+            flex-wrap: wrap;
+            &__author {
+                display: block;
+                margin: 0 auto;
+            }
+            &__img {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        &-content {
+            flex-wrap: wrap;
+            &__author {
+                &--luis {
+                    font-size: 58px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

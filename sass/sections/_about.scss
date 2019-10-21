@@ -1,0 +1,129 @@
+.about {
+    margin-top: 175px;
+    &-line {
+        display: inline-block;
+        width: 60px;
+        height: 4px;
+        background-color: $line;
+        margin-bottom: 20px;
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        &__more {
+            &--know {
+                color: $menuBlack;
+                opacity: 0.8;
+                font-size: 46px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 5.52px;
+            }
+            &--text {
+                width: 468px;
+                height: 120px;
+                color: $menuBlack;
+                @include Myriad;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+            &--btn {
+                background-color: transparent;
+                border: 1px solid $menuBlack;
+                color: $menuBlack;
+                width: 245px;
+                height: 50px;
+                text-transform: uppercase;
+                transition: all .4s ease;
+                font-size: 16px;
+                letter-spacing: 0.96px;
+                font-weight: 500;
+                font-family: "Asap", sans-serif;
+                margin-top: 40px;
+                &:hover {
+                    background-color: $menuBlack;
+                    transition: all .4s ease;
+                    border: transparent;
+                    color: #ffffff;
+                }
+            }
+        }
+        &__img {
+            margin-bottom: 125px;
+            margin-top: -85px;
+        }
+    }
+}
+@media (max-width: 1119px) {
+    .about {
+        &-wrapper {
+            &__img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .about {
+        margin-top: 100px;
+        &-wrapper {
+            &__more {
+                margin-right: 60px;
+                &--know {
+                    font-size: 38px;
+                }
+                &--text {
+                    width: 320px;
+                }
+                &--btn {
+                    margin-top: 70px;
+                    margin-bottom: 20px;
+                }
+            }
+            &__img {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        &-wrapper {
+            display: block;
+            margin: 0 auto; 
+            &__more {
+                margin-right: 0px;
+                &--know {
+                    font-size: 38px;
+                }
+                &--text {
+                    width: 100%; 
+                }
+                &--btn {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .about {
+        &-wrapper {
+            &__more {
+                &--btn {
+                    margin-top: 90px;
+                    margin-bottom: 30px;
+                }
+            }
+            
+        }
+    }
+}

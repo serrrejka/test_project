@@ -1,0 +1,119 @@
+.portfolio {
+    background-color: $bg;
+    padding-top: 120px;
+    padding-bottom: 145px;
+    &-title {
+        opacity: 0.8;
+        color: $menuBlack;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 49px;
+        text-transform: uppercase;
+        letter-spacing: 5.52px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+    &-line {
+        display: block;
+        margin: 0 auto;
+        width: 60px;
+        height: 4px;
+        background-color: $line;
+    }
+    &-items {
+        margin-bottom: 30px;
+        position: relative;
+        transition: all .4s ease-in;
+        max-width: 368px;
+        &:hover .portfolio-items__btn {
+            left: 0;
+            top: 0;
+            box-shadow: 0 0 37px 12px rgba(0, 0, 0, 0.15);
+            background-color: #212121;  
+            width: 368px;
+            height: 100%;
+            display: block;
+            transition: all .4s ease-in;
+        }
+        &__btn {
+            display: none;
+            position: absolute;
+            transition: all .4s ease-in;
+            .btn-next {
+                width: 56px;
+                height: 55px;
+                background-color: #ffffff;
+                border: none;
+                position: relative;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                top: 40%;
+                &:after {
+                    content: url(../img/portfolio/icon.png);
+                }
+            }
+        }
+    }
+    &-btn {
+        width: 190px;
+        height: 50px;
+        box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border: none;
+        color: $menuBlack;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.96px;
+        display: block;
+        margin: 0 auto;
+        transition: all .4s ease-in;
+        
+        &:hover {
+            background-color: $menuBlack;
+            color: #ffffff;
+            transition: all .4s ease-in;
+        }
+    }
+}
+@media (max-width: 1119px) {
+    .portfolio {
+        &-items {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .portfolio {
+        &-items {
+            width: 250px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            img {
+                width: 250px;
+            }
+            &:hover .portfolio-items__btn {
+                width: 250px;
+            }
+            &__btn {
+                .btn-next {
+                    img {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 480px) {
+    .portfolio {
+        &-title {
+            font-size: 38px;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.testimonials {
+    padding-top: 120px;
+    padding-bottom: 145px;
+    &-title {
+        opacity: 0.8;
+        color: $menuBlack;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 49px;
+        text-transform: uppercase;
+        letter-spacing: 5.52px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+    &-line {
+        display: block;
+        margin: 0 auto;
+        width: 60px;
+        height: 4px;
+        background-color: $line;
+    }
+    .swiper-container {
+        width: 955px;
+        height: 349px;
+        border: 1px solid $textBlack;
+    }
+    .swiper-pagination {
+        margin-bottom: 30px;
+    }
+    .swiper-pagination-bullet {
+        width: 13px;
+        height: 13px;
+        border: 1px solid $textBlack;
+        border-radius: 0;
+        background: #ffffff;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background: $textBlack;
+      }
+    &-wrapper {
+        &__items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--wrap {
+                margin-left: 30px;
+                &__name {
+                    opacity: 0.9;
+                    color: $textBlack;
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-top: 5px;
+                }
+                &__post {
+                    color: $textBlack;
+                    font-size: 12px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-top: 10px;
+                }
+                &__text {
+                    margin-top: 15px;
+                    width: 579px;
+                    opacity: 0.6;
+                    color: $textBlack;
+                    @include Myriad;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1119px) {
+    .testimonials {
+        .swiper-container {
+            width: 850px;
+        }
+        &-wrapper {
+            &__items {
+                &--img {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 992px) {
+    .testimonials {
+        .swiper-container {
+            width: 600px;
+        }
+        &-wrapper {
+            &__items {
+                &--wrap {
+                    margin-left: 15px;
+                    &__text {
+                        width: 400px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px) {
+    .testimonials {
+        .swiper-container {
+            width: 410px;
+            height: 420px;
+        }
+        .swiper-pagination {
+            margin-bottom: 20px;
+        }
+        &-wrapper {
+            &__items {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                &--img {
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
+                &--wrap {
+                    &__name {
+                        text-align: center; 
+                    }
+                    &__post {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 480px) {
+    .testimonials {
+        &-title {
+            font-size: 32px;
+        }
+        .swiper-container {
+            width: 280px;
+            height: 460px;
+        }
+        &-wrapper {
+            &__items {
+                &--wrap {
+                    &__text {
+                        text-align: center;
+                        width: 260px;
+                    }
+                }
+            }
+        }
+    }
+}

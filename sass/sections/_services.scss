@@ -1,0 +1,84 @@
+.services {
+    background-color: $bg;
+    padding-top: 120px;
+    padding-bottom: 145px;
+    &-title {
+        opacity: 0.8;
+        color: $menuBlack;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 49px;
+        text-transform: uppercase;
+        letter-spacing: 5.52px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    &-line {
+        display: block;
+        margin: 0 auto;
+        width: 60px;
+        height: 4px;
+        background-color: $line;
+    }
+    &-items {
+        text-align: center;
+        .services-sprites {
+            margin-top: 150px;
+            color: $menuBlack;
+            font-size: 24px;
+            font-weight: 500;
+            &::before {
+                content: "";
+                background-image: url(../img/services/sprite.png);
+                position: absolute;
+                left: 0;
+                top: 60px;
+                right: 0;
+                width: 77px;
+                height: 77px;
+                background-position: -10px -105px;
+                display: block;
+                margin: 0 auto; 
+            }
+        }
+    }
+    .row {
+        .col-xl-4:nth-child(2) .services-sprites::before {
+            width: 76px;
+            height: 62px;
+            background-position: -216px -10px;
+        }
+        .col-xl-4:nth-child(3) .services-sprites::before {
+            width: 67px;
+            height: 75px;
+            background-position: -120px -106px;
+        }
+        .col-xl-4:nth-child(4) .services-sprites::before {
+            width: 90px;
+            height: 75px;
+            background-position: -10px -10px;
+        }
+        .col-xl-4:nth-child(5) .services-sprites::before {
+            width: 57px;
+            height: 81px;
+            background-position: -216px -92px;
+        }
+        .col-xl-4:last-child .services-sprites::before {
+            width: 76px;
+            height: 76px;
+            background-position: -120px -10px;
+        }
+    }
+}
+@media (max-width: 1119px) {
+    .services {
+        padding-bottom: 45px;
+    }
+}
+@media(max-width: 480px) {
+    .services {
+        &-title {
+            font-size: 38px;
+        }
+    }
+}

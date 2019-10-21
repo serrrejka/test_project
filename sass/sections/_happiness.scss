@@ -1,0 +1,39 @@
+.happiness {
+    background-color: $bg;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    &-items {
+        text-align: center;
+        margin-bottom: 20px;
+        &__img {
+            // width: 100px;
+            height: 100px;
+        }
+        &__count {
+            opacity: 0.9;
+            color: $textBlack;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 32px;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        &__top {
+            margin-top: 20px;
+        }
+        &__description {
+            opacity: 0.9;
+            color: $textBlack;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            text-transform: uppercase;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .happiness {
+        padding-bottom: 35px;
+    }
+}
